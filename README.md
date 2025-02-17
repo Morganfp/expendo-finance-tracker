@@ -2,9 +2,9 @@
 
 A finance tracking application that helps users manage their finances by recording income and expenses. Built with React, this app features light/dark mode, persistent data storage, and intuitive transaction management.
 
-<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/7e6b3469-18a5-4bcb-9b0f-9fb0fb7cc87e" />
+<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/8d4bcefc-d891-4f23-be68-8c04ba083598" />
 
-<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/f2539930-f47d-4e2b-b641-4b03283f60ce" />
+<img width="1440" alt="Image" src="https://github.com/user-attachments/assets/b81c3e00-a4f1-4a3d-9b0b-930143dda774" />
 
 ### Header
 
