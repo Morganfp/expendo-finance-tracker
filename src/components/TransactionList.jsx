@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useMemo, useState } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 import { TransactionsContext } from '../contexts/TransactionsContext';
 
@@ -7,6 +7,14 @@ function TransactionList() {
   // Access the contexts
   const { theme, setTheme } = useContext(ThemeContext);
   const { transactions, setTransactions } = useContext(TransactionsContext);
+
+  // Optimize sorting with useMemo so we only sort when the transactions state is modified
+  const sortTransactions = () =>
+    useMemo(() => {
+      return [...transactions].sort(
+        (a, b) => new Date(b.date) - new Date(a.date)
+      );
+    }, [transactions]);
 
   // Return the styles transaction type
   const getTransType = (transType) => {
@@ -64,7 +72,7 @@ function TransactionList() {
         }}
       >
         {transactions.length > 0 ? (
-          transactions.map((trans, index) => (
+          sortTransactions().map((trans, index) => (
             <div
               key={trans.id}
               onMouseEnter={() => setHoverId(trans.id)}

@@ -25,7 +25,9 @@ A finance tracking application that helps users manage their finances by recordi
 
 ### Transactions Table
 
-- **Transaction List**: View all recorded transactions in a clean, tabular format
+- **Transaction List**:
+- View all recorded transactions in a clean, tabular format
+- Transactions are sorted by date, with sorting optimized using `useMemo`
 - **Interactive UI**:
   - Hover to reveal delete option (× icon)
   - Instant removal of transactions
