@@ -23,6 +23,12 @@ function AddTransaction() {
       { ...formData, id: crypto.randomUUID() },
       ...prev,
     ]);
+    // Clear the input fields after submission
+    formData.type = '';
+    formData.amount = '';
+    formData.date = '';
+    formData.category = '';
+    formData.description = '';
   };
 
   const handleChange = (event) => {
